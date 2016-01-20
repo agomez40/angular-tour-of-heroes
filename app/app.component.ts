@@ -5,8 +5,8 @@ import {Component} from 'angular2/core';
     template: `<h1>{{title}}</h1>
     <h2>My Heroes</h2>
     <ul class="heroes">
-        <li>
-            <!-- each hero goes here -->
+        <li *ngFor="#hero of heroes">
+            <span class="badge">{{hero.id}}</span> {{hero.name}}
         </li>
     </ul>
     <h2>{{hero.name}} details!</h2>
